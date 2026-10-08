@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyButton("space"))
+        {
+            GetComponent<Rigibody>().velocity = new Vector3()
+        }
         
     }
 }
