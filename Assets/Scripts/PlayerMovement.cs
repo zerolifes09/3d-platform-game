@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundedCheck;
     [SerializeField] LayerMask ground;
 
+    [SerializeField] AudioSource jumpsound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+        jumpsound.Play();
     }
 
     private void OnCollisionEnter(Collision collision)
