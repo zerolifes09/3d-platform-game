@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class Finish : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
