@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+    [SerializeField] AudioSource deathSound;
+
     bool dead = false;
 
     private void Update()
@@ -29,6 +31,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         Invoke(nameof(ReloadLevel), 1.3f);
         dead = true;
+        deathSound.Play();
     }
 
     void ReloadLevel()
